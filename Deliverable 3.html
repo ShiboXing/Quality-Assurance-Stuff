@@ -15,7 +15,7 @@
 </tr>
 <tr><td>click</td><td>link=CS1632 D3 Home<datalist><option>link=CS1632 D3 Home</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Factorial'])[1]/preceding::a[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Fibonacci'])[1]/preceding::a[2]</option><option>//a[contains(text(),'CS1632 D3 Home')]</option><option>//a[contains(@href, '/')]</option><option>//a</option><option>css=a</option></datalist></td><td></td>
 </tr>
-<tr><td>assertText</td><td><datalist><option></option></datalist></td><td>Welcome, friend, to a land of pure calculation</td>
+<tr><td>verifyText</td><td><datalist><option></option></datalist></td><td>Welcome, friend, to a land of pure calculation</td>
 </tr>
 </tbody></table>
 <table cellpadding="1" cellspacing="1" border="1">
@@ -23,18 +23,32 @@
 <tr><td rowspan="1" colspan="3">Cathy Page Numbered List Test</td></tr>
 </thead>
 <tbody>
+<tr><td>open</td><td>https://cs1632ex.herokuapp.com/hello<datalist><option>https://cs1632ex.herokuapp.com/hello</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Cathedral Pics<datalist><option>link=Cathedral Pics</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Hello'])[1]/following::a[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Fibonacci'])[1]/following::a[2]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Hello CS1632, from Prof. Laboon!'])[1]/preceding::a[1]</option><option>//a[contains(text(),'Cathedral Pics')]</option><option>//a[contains(@href, '/cathy')]</option><option>//li[8]/a</option></datalist></td><td></td>
+</tr>
+<tr><td>assertElementPresent</td><td>//ol/li[3]/img<datalist><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Cathedral Pictures'])[1]/following::img[3]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Cathedral Pics'])[1]/following::img[3]</option><option>//img[@alt='Old Cathedral']</option><option>//li[3]/img</option><option>css=img[alt="Old Cathedral"]</option><option>//ol/li[3]/img</option></datalist></td><td></td>
+</tr>
+<tr><td>assertElementPresent</td><td>//ol/li[1]/img<datalist><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Cathedral Pictures'])[1]/following::img[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Cathedral Pics'])[1]/following::img[1]</option><option>//img[@alt='Sunny Cathedral']</option><option>//img</option><option>css=img[alt="Sunny Cathedral"]</option><option>//ol/li[1]/img</option></datalist></td><td></td>
+</tr>
+<tr><td>assertElementPresent</td><td>//ol/li[2]/img<datalist><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Cathedral Pictures'])[1]/following::img[2]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Cathedral Pics'])[1]/following::img[2]</option><option>//img[@alt='Alpenglow Cathedral']</option><option>//li[2]/img</option><option>css=img[alt="Alpenglow Cathedral"]</option><option>//ol/li[2]/img</option></datalist></td><td></td>
+</tr>
 </tbody></table>
 <table cellpadding="1" cellspacing="1" border="1">
 <thead>
 <tr><td rowspan="1" colspan="3">Hello Page Trailing Message: 'We are number 1"</td></tr>
 </thead>
 <tbody>
+<tr><td>open</td><td>https://cs1632ex.herokuapp.com/hello/we are number 1<datalist><option>https://cs1632ex.herokuapp.com/hello</option><option>https://cs1632ex.herokuapp.com/hello/we are number 1</option></datalist></td><td></td>
+</tr>
 </tbody></table>
 <table cellpadding="1" cellspacing="1" border="1">
 <thead>
 <tr><td rowspan="1" colspan="3">Hello Page No Trail Message</td></tr>
 </thead>
 <tbody>
+<tr><td>open</td><td>https://cs1632ex.herokuapp.com/hello<datalist><option>https://cs1632ex.herokuapp.com/cathy</option><option>https://cs1632ex.herokuapp.com/hello</option></datalist></td><td></td>
+</tr>
 </tbody></table>
 <table cellpadding="1" cellspacing="1" border="1">
 <thead>

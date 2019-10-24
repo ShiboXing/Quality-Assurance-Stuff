@@ -49,11 +49,11 @@
 </tr>
 <tr><td>click</td><td>link=Factorial<datalist><option>link=Factorial</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='CS1632 D3 Home'])[1]/following::a[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Fibonacci'])[1]/preceding::a[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Hello'])[1]/preceding::a[2]</option><option>//a[contains(text(),'Factorial')]</option><option>//a[contains(@href, '/fact')]</option><option>//li[2]/a</option></datalist></td><td></td>
 </tr>
-<tr><td>click</td><td>name=value<datalist><option>name=value</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Enter number to calculate factorial of:'])[1]/following::input[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Cathedral Pics'])[1]/following::input[1]</option><option>//input[@name='value']</option><option>//input</option><option>css=input[name="value"]</option></datalist></td><td></td>
-</tr>
 <tr><td>type</td><td>name=value<datalist><option>name=value</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Enter number to calculate factorial of:'])[1]/following::input[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Cathedral Pics'])[1]/following::input[1]</option><option>//input[@name='value']</option><option>//input</option><option>css=input[name="value"]</option></datalist></td><td>n</td>
 </tr>
 <tr><td>click</td><td>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Enter number to calculate factorial of:'])[1]/following::input[2]<datalist><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Enter number to calculate factorial of:'])[1]/following::input[2]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Cathedral Pics'])[1]/following::input[2]</option><option>//input[@value='Submit']</option><option>//input[2]</option><option>css=input[type="submit"]</option></datalist></td><td></td>
+</tr>
+<tr><td>assertText</td><td>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Cathedral Pics'])[1]/following::h2[1]<datalist><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Cathedral Pics'])[1]/following::h2[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Hello'])[1]/following::h2[1]</option><option>//h2</option><option>css=h2</option></datalist></td><td>Factorial of n is 1!</td>
 </tr>
 </tbody></table>
 <table cellpadding="1" cellspacing="1" border="1">
@@ -71,6 +71,8 @@
 </tr>
 <tr><td>click</td><td>id=sub<datalist><option>id=sub</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Enter number to calculate Fibonacci of:'])[1]/following::input[2]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Cathedral Pics'])[1]/following::input[2]</option><option>//input[@id='sub']</option><option>//input[2]</option><option>css=#sub</option></datalist></td><td></td>
 </tr>
+<tr><td>assertText</td><td>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Cathedral Pics'])[1]/following::h2[1]<datalist><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Cathedral Pics'])[1]/following::h2[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Hello'])[1]/following::h2[1]</option><option>//h2</option><option>css=h2</option></datalist></td><td>Fibonacci of n is 1!</td>
+</tr>
 </tbody></table>
 <table cellpadding="1" cellspacing="1" border="1">
 <thead>
@@ -87,6 +89,8 @@
 </tr>
 <tr><td>click</td><td>id=sub<datalist><option>id=sub</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Enter number to calculate Fibonacci of:'])[1]/following::input[2]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Cathedral Pics'])[1]/following::input[2]</option><option>//input[@id='sub']</option><option>//input[2]</option><option>css=#sub</option></datalist></td><td></td>
 </tr>
+<tr><td>assertText</td><td>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Cathedral Pics'])[1]/following::h2[1]<datalist><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Cathedral Pics'])[1]/following::h2[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Hello'])[1]/following::h2[1]</option><option>//h2</option><option>css=h2</option></datalist></td><td>Fibonacci of 100 is 1!</td>
+</tr>
 </tbody></table>
 <table cellpadding="1" cellspacing="1" border="1">
 <thead>
@@ -102,6 +106,8 @@
 <tr><td>type</td><td>id=tb1<datalist><option>id=tb1</option><option>name=value</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Enter number to calculate Fibonacci of:'])[1]/following::input[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Cathedral Pics'])[1]/following::input[1]</option><option>//input[@id='tb1']</option><option>//input</option><option>css=#tb1</option></datalist></td><td>0</td>
 </tr>
 <tr><td>click</td><td>id=sub<datalist><option>id=sub</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Enter number to calculate Fibonacci of:'])[1]/following::input[2]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Cathedral Pics'])[1]/following::input[2]</option><option>//input[@id='sub']</option><option>//input[2]</option><option>css=#sub</option></datalist></td><td></td>
+</tr>
+<tr><td>assertText</td><td>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Cathedral Pics'])[1]/following::h2[1]<datalist><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Cathedral Pics'])[1]/following::h2[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Hello'])[1]/following::h2[1]</option><option>//h2</option><option>css=h2</option></datalist></td><td>Fibonacci of 0 is 1!</td>
 </tr>
 </tbody></table>
 <table cellpadding="1" cellspacing="1" border="1">
@@ -121,6 +127,8 @@
 </tr>
 <tr><td>click</td><td>id=sub<datalist><option>id=sub</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Enter number to calculate Fibonacci of:'])[1]/following::input[2]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Cathedral Pics'])[1]/following::input[2]</option><option>//input[@id='sub']</option><option>//input[2]</option><option>css=#sub</option></datalist></td><td></td>
 </tr>
+<tr><td>assertText</td><td>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Cathedral Pics'])[1]/following::h2[1]<datalist><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Cathedral Pics'])[1]/following::h2[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Hello'])[1]/following::h2[1]</option><option>//h2</option><option>css=h2</option></datalist></td><td>Fibonacci of 1 is 1!</td>
+</tr>
 </tbody></table>
 <table cellpadding="1" cellspacing="1" border="1">
 <thead>
@@ -136,6 +144,8 @@
 <tr><td>type</td><td>name=value<datalist><option>name=value</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Enter number to calculate factorial of:'])[1]/following::input[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Cathedral Pics'])[1]/following::input[1]</option><option>//input[@name='value']</option><option>//input</option><option>css=input[name="value"]</option></datalist></td><td>1</td>
 </tr>
 <tr><td>click</td><td>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Enter number to calculate factorial of:'])[1]/following::input[2]<datalist><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Enter number to calculate factorial of:'])[1]/following::input[2]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Cathedral Pics'])[1]/following::input[2]</option><option>//input[@value='Submit']</option><option>//input[2]</option><option>css=input[type="submit"]</option></datalist></td><td></td>
+</tr>
+<tr><td>assertText</td><td>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Cathedral Pics'])[1]/following::h2[1]<datalist><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Cathedral Pics'])[1]/following::h2[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Hello'])[1]/following::h2[1]</option><option>//h2</option><option>css=h2</option></datalist></td><td>Factorial of 1 is 1!</td>
 </tr>
 </tbody></table>
 <table cellpadding="1" cellspacing="1" border="1">
@@ -153,6 +163,8 @@
 </tr>
 <tr><td>click</td><td>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Enter number to calculate factorial of:'])[1]/following::input[2]<datalist><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Enter number to calculate factorial of:'])[1]/following::input[2]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Cathedral Pics'])[1]/following::input[2]</option><option>//input[@value='Submit']</option><option>//input[2]</option><option>css=input[type="submit"]</option></datalist></td><td></td>
 </tr>
+<tr><td>assertText</td><td>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Cathedral Pics'])[1]/following::h2[1]<datalist><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Cathedral Pics'])[1]/following::h2[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Hello'])[1]/following::h2[1]</option><option>//h2</option><option>css=h2</option></datalist></td><td>Factorial of 100 is 93326215443944152681699238856266700490715968264381621468592963895217599993229915608941463976156518286253697920827223758251185210916864000000000000000000000000!</td>
+</tr>
 </tbody></table>
 <table cellpadding="1" cellspacing="1" border="1">
 <thead>
@@ -169,13 +181,19 @@
 </tr>
 <tr><td>click</td><td>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Enter number to calculate factorial of:'])[1]/following::input[2]<datalist><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Enter number to calculate factorial of:'])[1]/following::input[2]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Cathedral Pics'])[1]/following::input[2]</option><option>//input[@value='Submit']</option><option>//input[2]</option><option>css=input[type="submit"]</option></datalist></td><td></td>
 </tr>
+<tr><td>assertText</td><td>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Cathedral Pics'])[1]/following::h2[1]<datalist><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Cathedral Pics'])[1]/following::h2[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Hello'])[1]/following::h2[1]</option><option>//h2</option><option>css=h2</option></datalist></td><td>Factorial of 0 is 1!</td>
+</tr>
 </tbody></table>
 <table cellpadding="1" cellspacing="1" border="1">
 <thead>
 <tr><td rowspan="1" colspan="3">Hello Page No Trail Message</td></tr>
 </thead>
 <tbody>
-<tr><td>open</td><td>https://cs1632ex.herokuapp.com/hello<datalist><option>https://cs1632ex.herokuapp.com/cathy</option><option>https://cs1632ex.herokuapp.com/hello</option></datalist></td><td></td>
+<tr><td>open</td><td>https://cs1632ex.herokuapp.com/<datalist><option>https://cs1632ex.herokuapp.com/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Hello<datalist><option>link=Hello</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Fibonacci'])[1]/following::a[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Factorial'])[1]/following::a[2]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Cathedral Pics'])[1]/preceding::a[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='CS1632 D3'])[2]/preceding::a[2]</option><option>//a[contains(text(),'Hello')]</option><option>//a[contains(@href, '/hello')]</option><option>//li[6]/a</option></datalist></td><td></td>
+</tr>
+<tr><td>assertText</td><td>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Cathedral Pics'])[1]/following::h2[1]<datalist><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Cathedral Pics'])[1]/following::h2[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Hello'])[1]/following::h2[1]</option><option>//h2</option><option>css=h2</option></datalist></td><td>Hello CS1632, from Prof. Laboon!</td>
 </tr>
 </tbody></table>
 <table cellpadding="1" cellspacing="1" border="1">
@@ -184,6 +202,8 @@
 </thead>
 <tbody>
 <tr><td>open</td><td>https://cs1632ex.herokuapp.com/hello/we are number 1<datalist><option>https://cs1632ex.herokuapp.com/hello</option><option>https://cs1632ex.herokuapp.com/hello/we are number 1</option></datalist></td><td></td>
+</tr>
+<tr><td>assertText</td><td>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Cathedral Pics'])[1]/following::h2[1]<datalist><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Cathedral Pics'])[1]/following::h2[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Hello'])[1]/following::h2[1]</option><option>//h2</option><option>css=h2</option></datalist></td><td>Hello CS1632, from we are number 1!</td>
 </tr>
 </tbody></table>
 <table cellpadding="1" cellspacing="1" border="1">

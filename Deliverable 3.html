@@ -198,12 +198,32 @@
 </tbody></table>
 <table cellpadding="1" cellspacing="1" border="1">
 <thead>
-<tr><td rowspan="1" colspan="3">Hello Page Trailing Message: 'We are number 1"</td></tr>
+<tr><td rowspan="1" colspan="3">Hello Page Trailing Message: "Jessa and Shibo"</td></tr>
 </thead>
 <tbody>
-<tr><td>open</td><td>https://cs1632ex.herokuapp.com/hello/we are number 1<datalist><option>https://cs1632ex.herokuapp.com/hello</option><option>https://cs1632ex.herokuapp.com/hello/we are number 1</option></datalist></td><td></td>
+<tr><td>open</td><td>https://cs1632ex.herokuapp.com/hello/Jessa and Shibo<datalist><option>https://cs1632ex.herokuapp.com/hello</option><option>https://cs1632ex.herokuapp.com/hello/we are number 1</option><option>https://cs1632ex.herokuapp.com/hello/Jessa and Shibo</option></datalist></td><td></td>
 </tr>
-<tr><td>assertText</td><td>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Cathedral Pics'])[1]/following::h2[1]<datalist><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Cathedral Pics'])[1]/following::h2[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Hello'])[1]/following::h2[1]</option><option>//h2</option><option>css=h2</option></datalist></td><td>Hello CS1632, from we are number 1!</td>
+<tr><td>assertText</td><td>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Cathedral Pics'])[1]/following::h2[1]<datalist><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Cathedral Pics'])[1]/following::h2[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Hello'])[1]/following::h2[1]</option><option>//h2</option><option>css=h2</option></datalist></td><td>Hello CS1632, from Jessa and Shibo!</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Hello Page Number Test</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://cs1632ex.herokuapp.com/hello/2019<datalist><option>https://cs1632ex.herokuapp.com/</option><option>https://cs1632ex.herokuapp.com/hello/2019</option></datalist></td><td></td>
+</tr>
+<tr><td>assertText</td><td>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Cathedral Pics'])[1]/following::h2[1]<datalist><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Cathedral Pics'])[1]/following::h2[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Hello'])[1]/following::h2[1]</option><option>//h2</option><option>css=h2</option></datalist></td><td>Hello CS1632, from 2019!</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Hello Page Number with special character</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>https://cs1632ex.herokuapp.com/hello/#1<datalist><option>https://cs1632ex.herokuapp.com/hello/2019</option><option>https://cs1632ex.herokuapp.com/hello/#2019</option><option>https://cs1632ex.herokuapp.com/hello/#100</option><option>https://cs1632ex.herokuapp.com/hello/#1</option></datalist></td><td></td>
+</tr>
+<tr><td>assertText</td><td>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Cathedral Pics'])[1]/following::h2[1]<datalist><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Cathedral Pics'])[1]/following::h2[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Hello'])[1]/following::h2[1]</option><option>//h2</option><option>css=h2</option></datalist></td><td>Hello CS1632, from #1!</td>
 </tr>
 </tbody></table>
 <table cellpadding="1" cellspacing="1" border="1">

@@ -72,8 +72,8 @@ public class MonkeySim {
 				}
 				return ml.get(j);
 			}*/
-			if (ml.get(j).getMonkeyNum() != 1)
-				return ml.get(j);
+			if (ml.get(i).getMonkeyNum() != 1)
+				return ml.get(i);
 		}
 
 		return null;

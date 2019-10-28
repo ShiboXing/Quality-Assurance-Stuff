@@ -72,8 +72,8 @@ public class MonkeySim {
 				}
 				return ml.get(j);
 			}*/
-			if (ml.get(j).getMonkeyNum() != 1)
-				return ml.get(j);
+			if (ml.get(i).getMonkeyNum() != 1)
+				return ml.get(i);
 		}
 
 		return null;
@@ -91,9 +91,9 @@ public class MonkeySim {
 	public static String stringifyResults(int c, Monkey m, Monkey m2) {
 		String toReturn = new String("");
 		try {
-			for (int j = 0; j < HEADER; j++) {
-				toReturn += "@";
-			}
+			// for (int j = 0; j < HEADER; j++) {
+			// 	toReturn += "@";
+			// }
 			toReturn += new String("//Round ");
 			toReturn += new String("" + c);
 			toReturn += new String(": Threw banana from Monkey (#");
@@ -104,7 +104,8 @@ public class MonkeySim {
 			System.out.println("INVALID MONKEY!");
 			System.exit(2);
 		}
-		return toReturn.substring(HEADER);
+		return toReturn;
+		//.substring(HEADER);
 	}
 
 	/**

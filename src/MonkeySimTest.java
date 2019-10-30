@@ -33,4 +33,9 @@ public class MonkeySimTest {
 	 *          make sure the generated random number for s is greater than or equal
 	 *          to 1.
 	 */
+	 @Property
+	 public void testMonkeySim()
+	 {
+		 
+	 }
 }

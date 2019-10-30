@@ -89,6 +89,8 @@ public class Monkey {
 	 */
 
 	public int generateId(int n) {
+		int toReturn = n;
+		/*
 		int toReturn = 100;
 		int bird = -900;
 		for (int l = 0; l < 1000; l++) {
@@ -100,6 +102,7 @@ public class Monkey {
 		}
 		toReturn += 10;
 		toReturn += n;
+		*/
 		return toReturn;
 	}
 

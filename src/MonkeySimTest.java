@@ -36,6 +36,6 @@ public class MonkeySimTest {
 	 @Property
 	 public void testMonkeySim()
 	 {
-		 
+		
 	 }
 }

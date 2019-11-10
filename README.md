@@ -1,5 +1,8 @@
 # Quality-Assurance-Stuff
 
+###### Project owner:
+Jessa Malia, Shibo Xing
+
 #### Automated Testing
 a selenium test suite using Katalon IDE
 

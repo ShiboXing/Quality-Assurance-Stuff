@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="GameTest (7)" project="Coffee Maker Quest" tests="18" started="18" failures="0" errors="0" ignored="0">
+  <testsuite name="GameTest" time="3.467">
+    <testcase name="testInventory" classname="GameTest" time="0.228"/>
+    <testcase name="testLook1" classname="GameTest" time="0.002"/>
+    <testcase name="testLook2" classname="GameTest" time="0.003"/>
+    <testcase name="testHelp" classname="GameTest" time="0.001"/>
+    <testcase name="testGameMain" classname="GameTest" time="3.212"/>
+    <testcase name="testConstrutor" classname="GameTest" time="0.002"/>
+    <testcase name="testGetRoom" classname="GameTest" time="0.001"/>
+    <testcase name="testDisplayRoom" classname="GameTest" time="0.004"/>
+    <testcase name="testDrink1" classname="GameTest" time="0.001"/>
+    <testcase name="testDrink2" classname="GameTest" time="0.001"/>
+    <testcase name="testDrink3" classname="GameTest" time="0.001"/>
+    <testcase name="testDrink4" classname="GameTest" time="0.001"/>
+    <testcase name="testDrink5" classname="GameTest" time="0.0"/>
+    <testcase name="testAddNorthRoom" classname="GameTest" time="0.004"/>
+    <testcase name="testMoveNorth1" classname="GameTest" time="0.001"/>
+    <testcase name="testMoveNorth2" classname="GameTest" time="0.002"/>
+    <testcase name="testMoveSouth1" classname="GameTest" time="0.001"/>
+    <testcase name="testMoveSouth2" classname="GameTest" time="0.002"/>
+  </testsuite>
+</testrun>

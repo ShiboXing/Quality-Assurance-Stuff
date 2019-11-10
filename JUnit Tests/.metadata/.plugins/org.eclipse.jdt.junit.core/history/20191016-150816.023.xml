@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="RoomTest (1)" project="Coffee Maker Quest" tests="31" started="31" failures="0" errors="0" ignored="0">
+  <testsuite name="GameTest" time="7.857">
+    <testcase name="testInventory" classname="GameTest" time="0.176"/>
+    <testcase name="testLook1" classname="GameTest" time="0.001"/>
+    <testcase name="testLook2" classname="GameTest" time="0.0"/>
+    <testcase name="testHelp" classname="GameTest" time="0.001"/>
+    <testcase name="testGameMain" classname="GameTest" time="7.653"/>
+    <testcase name="testGetRoom" classname="GameTest" time="0.0"/>
+    <testcase name="testDisplayRoom" classname="GameTest" time="0.003"/>
+    <testcase name="testDrink1" classname="GameTest" time="0.002"/>
+    <testcase name="testDrink2" classname="GameTest" time="0.002"/>
+    <testcase name="testDrink3" classname="GameTest" time="0.001"/>
+    <testcase name="testDrink4" classname="GameTest" time="0.001"/>
+    <testcase name="testDrink5" classname="GameTest" time="0.0"/>
+    <testcase name="testAddNorthRoom" classname="GameTest" time="0.004"/>
+    <testcase name="testMoveNorth1" classname="GameTest" time="0.001"/>
+    <testcase name="testMoveNorth2" classname="GameTest" time="0.002"/>
+    <testcase name="testMoveSouth1" classname="GameTest" time="0.003"/>
+    <testcase name="testMoveSouth2" classname="GameTest" time="0.007"/>
+  </testsuite>
+  <testsuite name="RoomTest" time="0.009">
+    <testcase name="testGetAdjective" classname="RoomTest" time="0.0"/>
+    <testcase name="testGetNorth" classname="RoomTest" time="0.0"/>
+    <testcase name="testGetSouth" classname="RoomTest" time="0.0"/>
+    <testcase name="testSetNorthDoor" classname="RoomTest" time="0.0"/>
+    <testcase name="testGetSouthDoor" classname="RoomTest" time="0.005"/>
+    <testcase name="testGetItem" classname="RoomTest" time="0.001"/>
+    <testcase name="testSetAdjective" classname="RoomTest" time="0.001"/>
+    <testcase name="testSetSouthDoor" classname="RoomTest" time="0.0"/>
+    <testcase name="testSetObject" classname="RoomTest" time="0.0"/>
+    <testcase name="testGetObject" classname="RoomTest" time="0.0"/>
+    <testcase name="testGetNorthDoor" classname="RoomTest" time="0.001"/>
+    <testcase name="testSetItem" classname="RoomTest" time="0.0"/>
+    <testcase name="testSetNorth" classname="RoomTest" time="0.001"/>
+    <testcase name="testSetSouth" classname="RoomTest" time="0.0"/>
+  </testsuite>
+</testrun>

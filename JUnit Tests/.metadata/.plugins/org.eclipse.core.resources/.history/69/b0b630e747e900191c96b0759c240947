@@ -1,0 +1,11 @@
+
+public class Player {
+	public Room room;
+	String Items[]; //coffee cream sugar
+	
+	public Player()
+	{
+		
+		Items=new String[3];
+	}
+}

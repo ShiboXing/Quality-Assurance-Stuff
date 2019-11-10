@@ -1,0 +1,131 @@
+public class Game {
+	Boolean[] itemsObtained = {false, false, false};
+	String[] items = {"caffeinated coffee", "sweet sugar", "creamy cream"};
+	Room start;
+	Room northmost;
+	//pass in the first room
+	public Game(Room myStart)
+	{
+		start=myStart;
+		northmost = start;
+	}
+	
+	// Look at the item variable for the room, if it is -1 say there is nothing in the room, if it is 0, 1, or 2 get the corresponding
+	// item and say it is in the room, then set the corresponding itemsObtained array value to true
+	public String look() {
+		if(start.getItem()==-1)
+			return "You don't see anything out of the ordinary.";
+		int index=start.getItem();
+		itemsObtained[index]=true;
+		return "There might be something here...\nYou found some "+ items[index]+"!";
+	}
+	
+	//returns the current room that the user is in
+	public Room getRoom()
+	{
+		return start;
+	}
+	
+	// Check the north door variable for the room, if it is null say there is no room north and do nothing else. If it isn't null
+	// get the northern room from the current room and set the start variable to the new room.
+	public Room moveNorth() {
+		Room next=start.getNorth();
+		if (next==null)
+			System.out.println("There is no door in that direction.");
+		else 
+			start=next;
+		return start;
+	}
+	
+	// Check the south door variable for the room, if it is null say there is no room south and do nothing else. If it isn't null
+	// get the southern room from the current room and set the start variable to the new room.
+	public Room moveSouth() {
+		Room next=start.getSouth();
+		if (next==null)
+			System.out.println("There is no door in that direction.");
+		else 
+			start=next;
+		return start;
+	}
+	
+	// Check the itemsObtained array. If all three variables are true display a win screen, if not display a lose screen
+	// with the proper losing message.
+	public String drink() {
+		//Player has all items
+		if (itemsObtained[0] == true && itemsObtained[1] == true && itemsObtained[2] == true) {
+			return "You drink the beverage and are ready to study!\nYou win!";
+		//Player has no coffee
+		} else if (itemsObtained[0] != true && itemsObtained[1] == true && itemsObtained[2] == true) {
+			return "You drink the sweetened cream, but without caffeine, you cannot study.\nYou lose!";
+		//Player has no sugar
+		} else if (itemsObtained[0] == true && itemsObtained[1] != true && itemsObtained[2] == true) {
+			return "Without sugar, the coffee is too bitter.  You cannot study.\nYou lose!";
+		//Player has no cream
+		} else if (itemsObtained[0] == true && itemsObtained[1] == true && itemsObtained[2] != true) {
+			return "Without cream, you get an ulcer and cannot study.\nYou lose!";
+		//Player has no coffee and no sugar
+		} else if (itemsObtained[0] != true && itemsObtained[1] != true && itemsObtained[2] == true) {
+			return "You drink the cream, but without caffeine, you cannot study.\nYou lose!";
+		//Player has no coffee and no cream
+		} else if (itemsObtained[0] != true && itemsObtained[1] == true && itemsObtained[2] != true) {
+			return "You eat the sugar, but without caffeine, you cannot study.\nYou lose!";
+		//Player has no sugar and no cream
+		} else if (itemsObtained[0] == true && itemsObtained[1] != true && itemsObtained[2] != true) {
+			return "Without cream, you get an ulcer and cannot study.\nYou lose!";
+		} else if (itemsObtained[0] != true && itemsObtained[1] != true && itemsObtained[2] != true) {
+			return "You drink the air, as you have no coffee, sugar, or cream.\nThe air is invigorating, but not invigorating enough.  You cannot study.\nYou lose!";
+		}
+		return "error";
+	}
+	
+	// Display each command with a brief description of what they do.
+	public String help() {
+		return "N - Go north\nS - Go South\nL - Look and collect any items in the room\nI - Show inventory of items collected\nD - Drink coffee made from items in the inventory";
+	}
+	
+	// Check the itemsObtained array one by one. If the value is false say the player does not have the corresponding item, if it
+	// is true say that the player does have the corresponding item.
+	public String inventory() {
+		String res = "";
+		if (itemsObtained[0] == true) {
+			res = res + "You have a cup of delicious coffee.\n";
+		} else {
+			res = res + "YOU HAVE NO COFFEE!\n";
+		}
+		if (itemsObtained[2] == true) {
+			res = res + "You have some fresh cream.\n";
+		} else {
+			res = res + "YOU HAVE NO CREAM!\n";
+		}
+		if (itemsObtained[1] == true) {
+			res = res + "You have some tasty sugar.";
+		} else {
+			res = res + "YOU HAVE NO SUGAR!";
+		}
+		System.out.println(res);
+		return res;
+	}
+	
+	// Create a room and set the northernmost variable to it.
+	public Room addRoomNorth(Room room) {
+		Room tmp=northmost;
+		northmost.setNorth(room);
+		northmost=room;
+		northmost.setSouth(tmp);
+		return northmost;
+	}
+	
+	
+	
+	
+	// Display all relevant information about a room.
+	public String displayRoom() {
+		if (start.getNorthDoor() == null) {
+			return "You see a "+start.getAdjective()+" room.\nIt has a "+start.getObject()+".\nA "+start.getSouthDoor()+" door leads South.";
+		} else if (start.getSouthDoor() == null) {
+			return "You see a "+start.getAdjective()+" room.\nIt has a "+start.getObject()+".\nA "+start.getNorthDoor()+" door leads North.";
+		}
+		return "You see a "+start.getAdjective()+" room.\nIt has a "+start.getObject()+".\nA "
+				+ start.getNorthDoor()+" door leads North.\nA "+start.getSouthDoor()+" door leads South.";
+	}
+}

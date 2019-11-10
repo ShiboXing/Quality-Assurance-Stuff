@@ -1,0 +1,22 @@
+
+public class Player {
+	boolean Inv[]; //coffee cream sugar
+	
+	public Player()
+	{
+		Inv=new boolean[3];
+	}
+	
+	
+	public boolean getObtained(int item)
+	{
+		return Inv[item];
+	}
+	
+	public void setObtained(int item)
+	{
+		Inv[item]=true;	
+	}
+	
+	
+}

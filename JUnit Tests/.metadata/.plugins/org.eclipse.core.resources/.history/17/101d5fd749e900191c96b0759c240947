@@ -1,0 +1,9 @@
+
+public class Player {
+	boolean Inv[]; //coffee cream sugar
+	
+	public Player()
+	{
+		Inv=new boolean[3];
+	}
+}

@@ -1,0 +1,11 @@
+
+public class Player {
+	public Room room;
+	boolean Items[]; //coffee cream sugar
+	
+	public Player()
+	{
+		
+		Items=new boolean[3];
+	}
+}

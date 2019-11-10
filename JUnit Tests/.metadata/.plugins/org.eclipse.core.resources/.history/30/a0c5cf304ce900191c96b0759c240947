@@ -1,0 +1,32 @@
+
+public class Player {
+	boolean Inv[]; //coffee cream sugar
+	int size;
+	
+	public Player()
+	{
+		Inv=new boolean[3];
+		size=0;
+	}
+	
+	
+	public boolean getObtained(int item)
+	{
+		return Inv[item];
+	}
+	
+	public void setObtained(int item)
+	{
+		if (Inv[item]==false)
+			size++;
+		Inv[item]=true;	
+	}
+	
+	public boolean checkWin()
+	{
+		if(size==3)
+			return true;
+	}
+	
+	
+}

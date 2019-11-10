@@ -1,0 +1,153 @@
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+import org.junit.After;
+import org.junit.Before;
+import org.mockito.*;
+
+
+public class RoomTest {
+	Room room1;
+	Room room2;
+	Room room3;
+	
+	@Before
+	public void setUp() throws Exception {
+		room1 = new Room("Amazing", "Loud Couch", "Dark", "Fun",  -1);
+		room2 = new Room("Spooky", "Long Bench", "Bubbly", "Green", 0);
+		room3 = new Room("Bouncy", "Boring Bed", "Forest", "Tired", 1);
+		room1.north = room2;
+		room3.south = room2;
+	}
+	
+	@After
+	public void tearDown() throws Exception {
+		
+	}
+	
+	// You should be able to retrieve the room's unique adjective.
+	// Compare the adjective gotten from room1 to the set adjective. They should be equal.
+	@Test
+	public void testGetAdjective() {
+		String adjective = room1.getAdjective();
+		assertEquals("Amazing", adjective);
+	}
+	
+	// You should be able to set the adjective of a room.
+	// Change the adjective of room1 to "Honest" using the setter method and then retrieve it to see if it changed
+	// appropriately.
+	@Test
+	public void testSetAdjective() {
+		room1.setAdjective("Honest");
+		String adjective = room1.getAdjective();
+		assertEquals("Honest", adjective);
+	}
+	
+	// You should be able to retrieve the room's unique object.
+	// Compare the object gotten from room1 to the set object. They should be equal.
+	@Test
+	public void testGetObject() {
+		String object = room1.getObject();
+		assertEquals("Loud Couch", object);
+	}
+	
+	
+	// You should be able to set the object a room contains.
+	// Set room1's object, then make an equality check to make sure that the object changed.
+	@Test
+	public void testSetObject() {
+		room1.setObject("Honest Sofa");
+		String object = room1.getObject();
+		assertEquals("Honest Sofa", object);
+	}
+	
+	
+	// You should be able to get the set item for that room.
+	// Get the item number from room1 and compare it to -1 since there should be no item in the room. They should be
+	// equal.
+	@Test
+	public void testGetItem() {
+		int item = room1.getItem();
+		assertEquals(-1, item);
+	}
+	
+	
+	// You should be able to set the item a room has.
+	// Set the item number to 0 for room1 and then retrieve the item number and compare it to 0. They should be equal.
+	@Test
+	public void testSetItem() {
+		room1.setItem(0);
+		int item = room1.getItem();
+		assertEquals(0, item);
+	}
+	
+	// You should be able to get the room to the north of the current room.
+	// The northern room of room1 is set to room2 in the setup. Retrieve room1's northern room and compare it to room2. They 
+	// should be equal.
+	@Test
+	public void testGetNorth() {
+		Room north = room1.getNorth();
+		assertEquals(room2, north);
+	}
+	
+	// You should be able to set the northern room of the current room.
+	// The northern room of room1 should be set to room3, then retrieved from room1 and compared to room3. They should be equal.
+	@Test
+	public void testSetNorth() {
+		room1.setNorth(room3);
+		Room north = room1.getNorth();
+		assertEquals(room3, north);
+	}
+	
+	// You should be able to get the room to the south of the current room.
+	// The southern room of room3 is set to room2 in the setup. Retrieve room3's southern room and compare it to room2. They 
+	// should be equal.
+	@Test
+	public void testGetSouth() {
+		Room south = room3.getSouth();
+		assertEquals(room2, south);
+	}
+	
+	// You should be able to set the northern room of the current room.
+	// The southern room of room3 should be set to room1 and then retrieved from room3 and compared to room1. They should be equal.
+	@Test
+	public void testSetSouth() {
+		room3.setSouth(room1);
+		Room south = room3.getSouth();
+		assertEquals(room1, south);
+	}
+	
+	// You should be able to get the door leading to the north.
+	//Retrieve the northern door from room1 and compare it to "Dark". They should be equal.
+	@Test
+	public void testGetNorthDoor() {
+		String north = room1.getNorthDoor();
+		assertEquals("Dark", north);
+	}
+	
+	// You should be able to set the door leading to the north.
+	// Set room1's northern door to "Light", then retrieve it and compare it to "Light". They should be equal.
+	@Test
+	public void testSetNorthDoor() {
+		room1.setNorthDoor("Light");
+		String north = room1.getNorthDoor();
+		assertEquals("Light", north);
+	}
+	
+	// You should be able to get the door leading to the south.
+	//Retrieve the southern door from room1 and compare it to "Fun". They should be equal.
+	@Test
+	public void testGetSouthDoor() {
+		String south = room1.getSouthDoor();
+		assertEquals("Fun", south);
+	}
+	
+	// You should be able to set the door leading to the south.
+	// Set room1's northern door to "Loud", then retrieve it and compare it to "Loud". They should be equal.
+	@Test
+	public void testSetSouthDoor() {
+		room1.setSouthDoor("Loud");
+		String south = room1.getSouthDoor();
+		assertEquals("Loud", south);
+	}
+}

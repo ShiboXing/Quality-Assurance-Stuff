@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="RoomTest (1)" project="Coffee Maker Quest" tests="32" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="GameTest" incomplete="true">
+    <testcase name="testInventory" classname="GameTest" incomplete="true"/>
+    <testcase name="testLook1" classname="GameTest" incomplete="true"/>
+    <testcase name="testLook2" classname="GameTest" incomplete="true"/>
+    <testcase name="testHelp" classname="GameTest" incomplete="true"/>
+    <testcase name="testGameMain" classname="GameTest" incomplete="true"/>
+    <testcase name="testGetRoom" classname="GameTest" incomplete="true"/>
+    <testcase name="testDisplayRoom" classname="GameTest" incomplete="true"/>
+    <testcase name="testDrink1" classname="GameTest" incomplete="true"/>
+    <testcase name="testDrink2" classname="GameTest" incomplete="true"/>
+    <testcase name="testDrink3" classname="GameTest" incomplete="true"/>
+    <testcase name="testDrink4" classname="GameTest" incomplete="true"/>
+    <testcase name="testDrink5" classname="GameTest" incomplete="true"/>
+    <testcase name="testAddNorthRoom" classname="GameTest" incomplete="true"/>
+    <testcase name="testMoveNorth1" classname="GameTest" incomplete="true"/>
+    <testcase name="testMoveNorth2" classname="GameTest" incomplete="true"/>
+    <testcase name="testMoveSouth1" classname="GameTest" incomplete="true"/>
+    <testcase name="testMoveSouth2" classname="GameTest" incomplete="true"/>
+  </testsuite>
+  <testsuite name="RoomTest" incomplete="true">
+    <testcase name="testGetAdjective" classname="RoomTest" incomplete="true"/>
+    <testcase name="testGetNorth" classname="RoomTest" incomplete="true"/>
+    <testcase name="testGetSouth" classname="RoomTest" incomplete="true"/>
+    <testcase name="testSetNorthDoor" classname="RoomTest" incomplete="true"/>
+    <testcase name="testGetSouthDoor" classname="RoomTest" incomplete="true"/>
+    <testcase name="testGetItem" classname="RoomTest" incomplete="true"/>
+    <testcase name="testSetAdjective" classname="RoomTest" incomplete="true"/>
+    <testcase name="testConstruct" classname="RoomTest" incomplete="true"/>
+    <testcase name="testSetSouthDoor" classname="RoomTest" incomplete="true"/>
+    <testcase name="testSetObject" classname="RoomTest" incomplete="true"/>
+    <testcase name="testGetObject" classname="RoomTest" incomplete="true"/>
+    <testcase name="testGetNorthDoor" classname="RoomTest" incomplete="true"/>
+    <testcase name="testSetItem" classname="RoomTest" incomplete="true"/>
+    <testcase name="testSetNorth" classname="RoomTest" incomplete="true"/>
+    <testcase name="testSetSouth" classname="RoomTest" incomplete="true"/>
+  </testsuite>
+</testrun>

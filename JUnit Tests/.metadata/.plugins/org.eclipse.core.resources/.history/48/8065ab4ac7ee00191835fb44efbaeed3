@@ -1,0 +1,75 @@
+
+public class Game {
+	Boolean[] itemsObtained = {false, false, false};
+	String[] items = {"caffeinated coffee", "sweet sugar", "creamy cream"};
+	Room start;
+	Room northmost = new Room(null, null, null, null, -1);
+	Room southmost = new Room(null, null, null, null, -1);
+	
+	//pass in the first room
+	public Game(Room myStart)
+	{
+		myStart=start;
+	}
+	
+	// Look at the item variable for the room, if it is -1 say there is nothing in the room, if it is 0, 1, or 2 get the corresponding
+	// item and say it is in the room, then set the corresponding itemsObtained array value to true
+	public String look() {
+		if(start.getItem()!=-1)
+			return "You don't see anything out of the ordinary.";
+		int index=start.getItem();
+		itemsObtained[index]=true;
+		return "You found some"+ items[index]+" !";
+	}
+	
+	//returns the current room that the user is in
+	public Room getRoom()
+	{
+		return start;
+	}
+	
+	// Check the north door variable for the room, if it is null say there is no room north and do nothing else. If it isn't null
+	// get the northern room from the current room and set the start variable to the new room.
+	public void moveNorth() {
+		
+	}
+	
+	// Check the south door variable for the room, if it is null say there is no room south and do nothing else. If it isn't null
+	// get the southern room from the current room and set the start variable to the new room.
+	public void moveSouth() {
+		
+	}
+	
+	// Check the itemsObtained array. If all three variables are true display a win screen and exit, if not display a lose screen
+	// and exit.
+	public void drink() {
+		
+	}
+	
+	// Display each command with a brief description of what they do.
+	public void help() {
+		
+	}
+	
+	// Check the itemsObtained array one by one. If the value is false say the player does not have the corresponding item, if it
+	// is true say that the player does have the corresponding item.
+	public void inventory() {
+		
+	}
+	
+	// Create a room and set the northernmost variable to it.
+	public void addRoomNorth(Room room, int item, String adjective, String object, String northdoor, String southdoor) {
+		
+	}
+	
+	// Create a room and set the southernmost variable to it.
+	public void addRoomSouth(Room room, int item, String adjective, String object, String northdoor, String southdoor) {
+		
+	}
+	
+	
+	// Display all relevant information about a room.
+	public void displayRoom() {
+		
+	}
+}

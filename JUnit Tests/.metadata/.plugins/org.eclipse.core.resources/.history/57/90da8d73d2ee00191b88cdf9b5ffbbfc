@@ -1,0 +1,45 @@
+import java.util.Scanner;
+
+public class GameMain {
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		String command = "";
+		Boolean play = true;
+		Game game = new Game(new Room("Small","Quaint sofa","Magenta",null,2));
+		game.addRoomNorth(new Room("Amazing", "Loud Couch", "Dark", "Fun",  -1));
+		game.addRoomNorth(new Room("Spooky", "Long Bench", "Bubbly", "Green", 0));
+		game.addRoomNorth(new Room("Bouncy", "Boring Bed", "Forest", "Tired", -1));
+		game.addRoomNorth(new Room("Funny", "Sad Record Player", "Beige", "Lame", -1));
+		game.addRoomNorth(new Room("Dumb", "Flat Water Bottle", null, "Fat", 1));
+		
+		
+		
+		System.out.println("Welcome to Coffeemaker Quest!");
+		while (play == true) {
+			System.out.print("Please enter a command (N, S, L, I, H, D): ");
+			command = in.nextLine();
+			command = command.toUpperCase();
+			if (!command.equals("N")) {
+				game.moveNorth();
+				game.displayRoom();
+			} else if (!command.equals("S")) {
+				game.moveSouth();
+				game.displayRoom();
+			} else if (!command.equals("L")) {
+				System.out.println(game.look());
+			} else if (!command.equals("I")) {
+				System.out.println(game.inventory());
+			} else if (!command.equals("H")) {
+				System.out.println(game.help());
+			} else if (!command.equals("D")) {
+				if(game.drink())
+					System.out.println("you win");
+				else
+					System.out.println("you lose");
+				play = false;
+			} else {
+				System.out.println("What?");
+			}
+		}
+	}
+}

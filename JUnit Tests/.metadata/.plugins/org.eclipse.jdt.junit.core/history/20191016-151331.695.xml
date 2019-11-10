@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="RoomTest (3)" project="Coffee Maker Quest" tests="15" started="15" failures="0" errors="0" ignored="0">
+  <testsuite name="RoomTest" time="0.004">
+    <testcase name="testGetAdjective" classname="RoomTest" time="0.0"/>
+    <testcase name="testGetNorth" classname="RoomTest" time="0.0"/>
+    <testcase name="testGetSouth" classname="RoomTest" time="0.0"/>
+    <testcase name="testSetNorthDoor" classname="RoomTest" time="0.0"/>
+    <testcase name="testGetSouthDoor" classname="RoomTest" time="0.0"/>
+    <testcase name="testGetItem" classname="RoomTest" time="0.0"/>
+    <testcase name="testSetAdjective" classname="RoomTest" time="0.0"/>
+    <testcase name="testSetSouthDoor" classname="RoomTest" time="0.0"/>
+    <testcase name="testSetObject" classname="RoomTest" time="0.0"/>
+    <testcase name="testGetObject" classname="RoomTest" time="0.0"/>
+    <testcase name="testGetNorthDoor" classname="RoomTest" time="0.0"/>
+    <testcase name="testSetItem" classname="RoomTest" time="0.001"/>
+    <testcase name="testConstructor" classname="RoomTest" time="0.0"/>
+    <testcase name="testSetNorth" classname="RoomTest" time="0.002"/>
+    <testcase name="testSetSouth" classname="RoomTest" time="0.001"/>
+  </testsuite>
+</testrun>

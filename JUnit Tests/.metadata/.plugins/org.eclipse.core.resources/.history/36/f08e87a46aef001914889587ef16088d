@@ -1,0 +1,116 @@
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+import org.junit.After;
+import org.junit.Before;
+import org.mockito.*;
+
+public class GameTest {
+	Game game;
+	Room _roomA;
+	Room _roomB;
+	Room _roomC;
+	
+	
+	@Before
+	public void setUp() throws Exception {
+		
+		_roomA=Mockito.mock(Room.class);
+		_roomB=Mockito.mock(Room.class);
+		_roomC=Mockito.mock(Room.class);
+		game = new Game(_roomA);
+	}
+	
+	@Test
+	public void testLook1() {
+		Mockito.when(_roomA.getItem()).thenReturn(2);
+		assertEquals(game.look(),"You found some creamy cream!");
+	}
+	
+	@Test
+	public void testLook2() {
+		Mockito.when(_roomA.getItem()).thenReturn(-1);
+		assertEquals(game.look(),"You don't see anything out of the ordinary.");
+	}
+	
+	@Test
+	public void testGetRoom() {
+		assertEquals(game.getRoom(),_roomA);
+	}
+	
+	@Test
+	public void testMoveNorth1() {
+		Mockito.when(_roomA.getNorth()).thenReturn(_roomB);
+		assertEquals(game.moveNorth(),_roomB);
+	}
+	
+	@Test
+	public void testMoveNorth2() {
+		Mockito.when(_roomA.getNorth()).thenReturn(null);
+		assertEquals(game.moveNorth(),_roomA);
+	}
+	
+	@Test
+	public void testMoveSouth() {
+
+		Mockito.when(_roomA.getSouth()).thenReturn(_roomB);
+		assertEquals(game.moveSouth(),_roomB);
+	}
+	
+	@Test
+	public void testDrink1() {
+		Mockito.when(_roomA.getItem()).thenReturn(0);
+		game.look();
+		Mockito.when(_roomA.getItem()).thenReturn(1);
+		game.look();
+		Mockito.when(_roomA.getItem()).thenReturn(2);
+		game.look();
+		assertEquals(game.drink(),"You drink the beverage and are ready to study!\\nYou win!");
+	}
+	
+	@Test
+	public void testDrink2() {
+		assertEquals(game.drink());
+	}
+	
+	@Test
+	public void testHelp() {
+		assertEquals(game.help(),"\"N\" to go North, \"S\" to go South, \"L\" to Look for items, \"I\" for Inventory, \"H\" for Help, or \"D\" to Drink.");
+	}
+	
+	@Test 
+	public void testInventory() {
+		Mockito.when(_roomA.getItem()).thenReturn(0);
+		game.look();
+		Mockito.when(_roomA.getItem()).thenReturn(1);
+		game.look();
+		assertEquals(game.inventory(),"caffeinated coffee sweet sugar ");
+	}
+	
+	@Test
+	public void testAddNorthRoom() {
+		
+		assertEquals(game.addRoomNorth(_roomB),_roomB);
+	}
+	
+	@Test
+	public void testDisplayRoom() {
+		Mockito.when(_roomA.getAdjective()).thenReturn("Sad");
+		Mockito.when(_roomA.getObject()).thenReturn("Sad Object");
+		Mockito.when(_roomA.getNorthDoor()).thenReturn("Sad Door");
+		Mockito.when(_roomA.getSouthDoor()).thenReturn("Ultra Sad Door");
+		
+		assertEquals(game.displayRoom(),"You see a Sad room, a Sad Object, a Sad Door leading"
+				+ " north and a Ultra Sad Door leading south");
+	}
+	
+	@After
+	public void tearDown() throws Exception {
+		game=null;
+		_roomA=null;
+		_roomB=null;
+		_roomC=null;
+	}
+	
+	
+}

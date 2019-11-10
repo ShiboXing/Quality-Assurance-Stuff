@@ -1,0 +1,132 @@
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+import org.junit.After;
+import org.junit.Before;
+import org.mockito.*;
+
+
+public class RoomTest {
+	Room room1 = new Room("Amazing", "Loud Couch", "Dark", "Fun",  -1);
+	Room room2 = new Room("Spooky", "Long Bench", "Bubbly", "Green", 0);
+	Room room3 = new Room("Bouncy", "Boring Bed", "Forest", "Tired", 1);
+	
+	@Before
+	public void setUp() throws Exception {
+		room1 = new Room("Amazing", "Loud Couch", "Dark", "Fun",  -1);
+		room2 = new Room("Spooky", "Long Bench", "Bubbly", "Green", 0);
+		room3 = new Room("Bouncy", "Boring Bed", "Forest", "Tired", 1);
+		room1.north = room2;
+		room3.south = room2;
+	}
+	
+	@After
+	public void tearDown() throws Exception {
+		
+	}
+	
+	@Test
+	public void testGetAdjective() {
+		String adjective = room1.getAdjective();
+		assertEquals("Amazing", adjective);
+	}
+	
+	
+	@Test
+	public void testSetAdjective() {
+		room1.setAdjective("Honest");
+		String adjective = room1.getAdjective();
+		assertEquals("Honest", adjective);
+	}
+	
+	@Test
+	public void testGetObject() {
+		String object = room1.getObject();
+		assertEquals("Loud Couch", object);
+	}
+	
+	@Test
+	public void testSetObject() {
+		room1.setObject("Honest");
+		String object = room1.getObject();
+		assertEquals("Loud Couch", object);
+	}
+	
+	@Test
+	public void testGetItem() {
+		String item = room1.getItem();
+		assertEquals(0, item);
+	}
+	
+	@Test
+	public void testSetItem() {
+		room1.setItem(0);
+		String item = room1.getItem();
+		assertEquals(0, item);
+	}
+	
+	@Test
+	public void testGeObtained() {
+		String obtained = room1.getObtained();
+		assertTrue(obtained);
+	}
+	
+	@Test
+	public void testSetObtained() {
+		room1.setObtained(false);
+		String obtained = room1.getObtained();
+		assertFalse(obtained);
+	}
+	
+	@Test
+	public void testGetNorth() {
+		Room north = room1.getNorth();
+		assertEquals(room2, north);
+	}
+	
+	@Test
+	public void testSetNorth() {
+		room1.setNorth(room3);
+		Room north = room1.getNorth();
+		assertEquals(room3, north);
+	}
+	
+	@Test
+	public void testGetSouth() {
+		Room south = room3.getSouth();
+		assertEquals(room2, south);
+	}
+	
+	@Test
+	public void testSetSouth() {
+		room3.setSouth(room1);
+		Room south = room3.getSouth();
+		assertEquals(room1, south);
+	}
+	
+	@Test
+	public void testGetNorthDoor() {
+		String north = room1.getNorthDoor();
+		assertEquals("Dark", north);
+	}
+	
+	@Test
+	public void testSetNorthDoor() {
+		room1.setNorthDoor("Light");
+		String north = room1.getNorthDoor();
+		assertEquals("Light", north);
+	}
+	
+	@Test
+	public void testGetSouthDoor() {
+		String south = room1.getSouthDoor();
+		assertEquals("Fun", south);
+	}
+	
+	@Test
+	public void testSetSouthDoor() {
+		room1.setSouthDoor("Loud");
+		String south = room1.getSouthDoor();
+		assertEquals("Loud", south);
+	}
+}

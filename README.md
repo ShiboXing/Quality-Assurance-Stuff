@@ -1,6 +1,6 @@
 # Quality-Assurance-Stuff
 
-###### Project owner:
+###### Projects owner:
 ###### Jessa Malia, Shibo Xing
 
 #### Automated Testing
